@@ -2,11 +2,11 @@
 int input(int *a, int *b, int *c)
 {
     printf("Enter the no \n");
-    scanf("%d",&a);
+    scanf("%d",a);
     printf("Enter the no \n");
-    scanf("%d",&b);
+    scanf("%d",b);
     printf("Enter the no \n");
-    scanf("%d",&c);
+    scanf("%d",c);
 }
 void compare(int a, int b, int c, int *largest)
 {
@@ -39,9 +39,9 @@ void output(int a, int b, int c, int largest)
 int main()
 {
     int a, b, c;
-    input(a,b,c);
+    input(&a,&b,&c);
     int largest;
-    compare(a,b,c,largest);
+    compare(a,b,c,&largest);
     output(a,b,c,largest);
     return 0;
 }
