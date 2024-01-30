@@ -1,9 +1,9 @@
 #include<stdio.h>
 float input()
 {
-     float n;
+    float n;
     printf("Enter the no. \n");
-    scanf("%.2f",&n);
+    scanf("%f",&n);
     return n;
 }
 float square_root(float n)
@@ -13,14 +13,14 @@ float square_root(float n)
     b=0.0001;
     while ((a*a-n)>b)
     {
-      a=(a+a/n)/2; 
+      a=(a+n/a)/2; 
     }
     return a;
     
 }
 void output(float n, float sqrroot)
 {
-    printf("The sqrroot of %.2f is %.2f",n,sqrroot);
+    printf("The sqrroot of %f is %f",n,sqrroot);
 }
 int main()
 {
