@@ -9,7 +9,7 @@ void input_two_strings(char *str1, char *str2)
 int stringcompare(char *str1, char *str2)
 {
     int i;
-    for (i=0; str1[i]==str2[i]; str1[i]!='\0' && str2[i]!='\0')
+    for (i=0; str1[i]!='\0' && str2[i]!='\0' && str1[i]==str2[i]; i++)
     if (str1[i]>str2[i])
     {
         return 0;
@@ -40,7 +40,7 @@ int main()
 {
     char str1[100];
     char str2[100];
-    input_two_strings(&str1,&str2);
+    input_two_strings(str1,str2);
     int result;
     result=stringcompare(str1,str2);
     output(str1,str2,result);
