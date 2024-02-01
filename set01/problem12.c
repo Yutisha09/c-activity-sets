@@ -39,7 +39,7 @@ Complex add( Complex a, Complex b)
     sum.imaginary=a.imaginary+b.imaginary;
     return sum;
 }
-Complex average_n_complex(int n,Complex c[n])
+Complex sum_n_complex(int n,Complex c[n])
 {
     Complex avg;
     Complex sum={0,0};
@@ -49,14 +49,12 @@ Complex average_n_complex(int n,Complex c[n])
         sum=add(c[i],sum);
     }
     
-    avg.real=sum.real/n;
-    avg.imaginary=sum.imaginary/n;
-    return avg;
+    return sum;
 }
 void output( int n,Complex c[n] ,Complex result)
 {
     int i;
-    printf("the avg of %d no.s",n);
+    printf("the sum of %d no.s",n);
     for ( i = 0; i < n; i++)
     printf("%.2f+%.2fi",c[i].real,c[i].imaginary);
     {
@@ -80,7 +78,7 @@ int main()
     Complex c[n];
     input_n_complex(n,c);
     Complex result;
-    result=average_n_complex(n,c);
+    result=sum_n_complex(n,c);
     output(n,c,result);
     return 0;
 }
