@@ -1,0 +1,75 @@
+PS C:\Users\yutis\Documents\PSC\c-activity-sets\set01> gdb ./problem12.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\yutis\Documents\PSC\c-activity-sets\set01\problem12.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40165e: file ./problem12.c, line 75.
+(gdb) r
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set01/./problem12.exe
+[New Thread 10604.0x30e8]
+[New Thread 10604.0x53ac]
+
+Breakpoint 1, 0x0040165e in main () at ./problem12.c:75
+75      {
+(gdb) b 77
+Breakpoint 2 at 0x401662: file ./problem12.c, line 77.
+(gdb) b 79
+Breakpoint 3 at 0x4016a9: file ./problem12.c, line 79.
+(gdb) b 81
+Breakpoint 4 at 0x4016bb: file ./problem12.c, line 81.
+(gdb) b 82
+Breakpoint 5 at 0x4016d3: file ./problem12.c, line 82.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set01/./problem12.exe
+[New Thread 8372.0x3a68]
+[New Thread 8372.0x3c2c]
+
+Breakpoint 1, 0x0040165e in main () at ./problem12.c:75
+75      {
+(gdb) n
+
+Breakpoint 2, main () at ./problem12.c:77
+77          n=get_n();
+(gdb) n
+enter the no.of complexes
+2
+78          Complex c[n];
+(gdb) n
+
+Breakpoint 3, main () at ./problem12.c:79
+79          input_n_complex(n,c);
+(gdb) n
+Enter the real part of the no.
+1
+Enter the imaginary part of the no.
+2
+Enter the real part of the no.
+2
+Enter the imaginary part of the no.
+3
+
+Breakpoint 4, main () at ./problem12.c:81
+81          result=sum_n_complex(n,c);
+(gdb) n
+
+Breakpoint 5, main () at ./problem12.c:82
+82          output(n,c,result);
+(gdb) n
+the sum of 2 no.s1.00+2.00i2.00+3.00i= 3.00+5.00i83         return 0;
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 8372] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
