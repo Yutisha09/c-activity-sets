@@ -9,7 +9,7 @@ void input_two_strings(char *str1, char *str2)
 int stringcompare(char *str1, char *str2)
 {
     int i;
-    for (i=0; str1[i]!='\0' && str2[i]!='\0' && str1[i]==str2[i]; i++)
+    for (i=0; str1[i]!='\0' && str2[i]!='\0' && str1[i]==str2[i]; i++);
     if (str1[i]>str2[i])
     {
         return 0;
@@ -18,22 +18,22 @@ int stringcompare(char *str1, char *str2)
     {
         return 1;
     }
-    else return 2;
+    return 2;
 }
 
 void output(char *str1, char *str2, int result)
 {
-    if(result=0)
+    if(result==0)
     {
-        printf("%s is greater than %s",str1,str2);
+        printf("%s is greater than %s\n",str1,str2);
     }
-     else if(result=1)
+     else if(result==1)
     {
-        printf("%s is greater than %s",str2,str1);
+        printf("%s is greater than %s\n",str2,str1);
     }
     else
     {
-        printf("%s is equall to %s",str1,str2);
+        printf("%s is equall to %s\n",str1,str2);
     }
 }
 int main()
