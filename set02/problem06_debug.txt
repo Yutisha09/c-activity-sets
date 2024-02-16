@@ -1,0 +1,53 @@
+PS C:\Users\yutis\Documents\PSC\c-activity-sets\set02> gdb ./problem06.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\yutis\Documents\PSC\c-activity-sets\set02\problem06.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40151c: file ./problem06.c, line 25.
+(gdb) r
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set02/./problem06.exe
+[New Thread 14016.0x8150]
+[New Thread 14016.0x7278]
+
+Breakpoint 1, main () at ./problem06.c:25
+25          input_string(a);
+(gdb) b 24
+Note: breakpoint 1 also set at pc 0x40151c.
+Breakpoint 2 at 0x40151c: file ./problem06.c, line 24.
+(gdb) b 27
+Breakpoint 3 at 0x40153c: file ./problem06.c, line 27.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set02/./problem06.exe
+[New Thread 10060.0x5940]
+[New Thread 10060.0x607c]
+
+Breakpoint 1, main () at ./problem06.c:25
+25          input_string(a);
+(gdb) n
+enter the string
+hello
+26          str_reverse(a,b);
+(gdb) n
+
+Breakpoint 3, main () at ./problem06.c:27
+27          output(a,b);
+(gdb) n
+The reverse of the string hello is olleh
+28          return 0;
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 10060] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
