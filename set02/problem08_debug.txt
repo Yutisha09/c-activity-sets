@@ -1,11 +1,74 @@
-typedef struct _triangle {
-	float base, altitude, area;
-} Triangle;
-int input_n();
+PS C:\Users\yutis\Documents\PSC\c-activity-sets\set02> gdb  ./problem08.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\yutis\Documents\PSC\c-activity-sets\set02\problem08.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4016b2: file ./problem08.c, line 63.
+(gdb) r
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set02/./problem08.exe 
+[New Thread 24968.0x70f8]
+[New Thread 24968.0xf38]
 
-Triangle input_triangle();
-void input_n_triangles(int n, Triangle t[n]);
-void find_area(Triangle *t);
-void find_n_areas(int n, Triangle t[n]);
-Triangle find_smallest_triangle(int n, Triangle t[n]);
-void output(int n, Triangle t[n], Triangle smallest);
+Breakpoint 1, 0x004016b2 in main () at ./problem08.c:63
+63      {
+(gdb) b 65
+Breakpoint 2 at 0x4016b6: file ./problem08.c, line 65.
+(gdb) b 69
+Breakpoint 3 at 0x401768: file ./problem08.c, line 69.
+(gdb) b 70
+Note: breakpoint 3 also set at pc 0x401768.
+Breakpoint 4 at 0x401768: file ./problem08.c, line 70.
+(gdb) b 71
+Breakpoint 5 at 0x401781: file ./problem08.c, line 71.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set02/./problem08.exe 
+[New Thread 6788.0x778c]
+[New Thread 6788.0x2a58]
+
+Breakpoint 1, 0x004016b2 in main () at ./problem08.c:63
+63      {
+(gdb) n
+
+Breakpoint 2, main () at ./problem08.c:65
+65          n=input_n();
+(gdb) n
+Enter the no. of tringles
+2
+66          Triangle t[n];
+(gdb) n
+67          input_n_triangles(n,t);
+(gdb) n
+Enter the base and altitude of the triangle
+2
+3
+Enter the base and altitude of the triangle
+4
+6
+68          find_n_areas(n,t);
+(gdb) n
+
+Breakpoint 3, main () at ./problem08.c:70
+70          smallest=find_smallest_triangle(n,t);
+(gdb) n
+
+Breakpoint 5, main () at ./problem08.c:71
+71          output(n,t,smallest);
+(gdb) n
+the smallest of given 2 triangleswith base 2.000000 and altitude 3.000000with base 4.000000 and altitude 6.000000is 3.00000072         return 0;
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 6788] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
