@@ -1,0 +1,66 @@
+PS C:\Users\yutis\Documents\PSC\c-activity-sets\set03> gdb ./problem02.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\yutis\Documents\PSC\c-activity-sets\set03\problem02.exe...done.
+(gdb) b main 
+Breakpoint 1 at 0x401606: file ./problem02.c, line 44.
+(gdb) r
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set03/./problem02.exe 
+[New Thread 31384.0x4b88]
+[New Thread 31384.0x7a40]
+
+Breakpoint 1, main () at ./problem02.c:44
+44        input_triangle(&x1,&y1,&x2,&y2,&x3,&y3);
+(gdb) b 43
+Note: breakpoint 1 also set at pc 0x401606.
+Breakpoint 2 at 0x401606: file ./problem02.c, line 43.
+(gdb) b 45
+Breakpoint 3 at 0x40163a: file ./problem02.c, line 45.
+(gdb) b 46
+Breakpoint 4 at 0x401680: file ./problem02.c, line 46.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\yutis\Documents\PSC\c-activity-sets\set03/./problem02.exe 
+[New Thread 14132.0x4d64]
+[New Thread 14132.0x3adc]
+
+Breakpoint 1, main () at ./problem02.c:44
+44        input_triangle(&x1,&y1,&x2,&y2,&x3,&y3);
+(gdb) n
+Enter the x axis of the 1st point
+1
+Enter the y axis of the 1st point
+1
+Enter the x axis of the 2nd point
+0
+Enter the y axis of the 2nd point
+0
+Enter the x axis of the 3rd point
+1
+Enter the y axis of the 3rd point
+1
+
+Breakpoint 3, main () at ./problem02.c:45
+45        float result=is_triangle(x1,y1,x2,y2,x3,y3);
+(gdb) n
+
+Breakpoint 4, main () at ./problem02.c:46
+46        output(x1,y1,x2,y2,x3,y3,result);
+(gdb) n
+The given points 1.000000 and 1.000000 , 0.000000 and 0.000000 and 1.000000 and 1.000000 does not make a triangle47       return 0;
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 14132] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
