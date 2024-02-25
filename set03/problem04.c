@@ -9,14 +9,16 @@ int input()
 int find_fibo(int n,int a[n])
 {
     int i;
-    int j;
+    int x=0;
+    int y=1; 
     int fibo=0;
     for ( i = 0;i<n;i++)
     {   
-        fibo=a[i]++;
-
+        fibo=x+y;
+        x=y;
+        y=fibo;
     }
-    return fibo;
+    return x;
     
 }
 void output(int n, int fibo)
