@@ -41,7 +41,6 @@ Complex add( Complex a, Complex b)
 }
 Complex sum_n_complex(int n,Complex c[n])
 {
-    Complex avg;
     Complex sum={0,0};
     int i;
     for ( i = 0; i < n; i++)
